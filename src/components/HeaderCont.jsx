@@ -15,7 +15,7 @@ const Header = (props) => {
         </Link>
       </h1>
       <div className="search">
-        <label htmlFor="" className="glass"></label>
+        <label htmlFor="searchInput" className="glass"></label>
         <input
           type="text"
           id="searchInput"

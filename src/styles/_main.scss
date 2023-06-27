@@ -81,14 +81,127 @@
       }
     }
 
-    .video__list {
-      ul {
-        display: flex;
-        flex-wrap: wrap;
+    .videos__inner {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .video__box {
+        width: 23%;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+          border-radius: 5px;
+          margin-bottom: 5px;
+        }
+        .videos__title {
+          color: aliceblue;
+          font-size: 0.9vw;
+          line-height: 1.2;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
       }
-      li {
-        color: aliceblue;
-        width: 31.3333%;
+    }
+  }
+}
+.videoConts {
+  background-color: #20361d;
+  padding-top: 100px;
+  .video__sub {
+    display: flex;
+    justify-content: space-between;
+    .left {
+      width: calc(100% - 330px);
+      .play {
+        position: relative;
+        width: 100%;
+        padding-bottom: 27.65%;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .desc {
+        .video__info {
+          h3 {
+            padding: 20px 0;
+            color: aliceblue;
+            font-size: 1.5vw;
+          }
+          span {
+            display: inline-block;
+            font-size: 0.9vw;
+            color: rgb(180, 186, 192);
+            white-space: pre-line;
+            text-align: justify;
+          }
+          .channel__info {
+            border-top: 1px dotted #0a3d00;
+            border-bottom: 1px dotted #0a3d00;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            a {
+              font-size: 1.3vw;
+              padding: 15px 15px;
+              font-weight: 500;
+              border-radius: 5px;
+              background-color: #336144;
+            }
+            span {
+              display: inline-block;
+              padding: 20px 20px;
+            }
+            .view {
+              font-size: 1vw;
+            }
+            .like {
+              font-size: 1vw;
+            }
+            .icon {
+              font-size: 1.2vw;
+              vertical-align: -4px;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 300px;
+      height: 600px;
+      background-color: #000;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #main {
+    #contents {
+      .videos__inner {
+        .video__box {
+          width: 31%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  #main {
+    #contents {
+      .videos__inner {
+        .video__box {
+          width: 48%;
+        }
       }
     }
   }
