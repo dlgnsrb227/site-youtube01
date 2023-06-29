@@ -4,7 +4,7 @@ export const categories = [
   { name: 'essential', icon: <RiMusicFill /> },
   { name: '때껄룩TAKE A LOOK', icon: <RiMusicFill /> },
   { name: 'Ode Studio Seoul', icon: <RiMusicFill /> },
-  { name: '샵일삼#13', icon: <RiMusicFill /> },
+  { name: '샵일삼 13', icon: <RiMusicFill /> },
   { name: 'by the way', icon: <RiMusicFill /> },
   { name: 'offweb', icon: <RiMusicFill /> },
   { name: 'thanks for coming', icon: <RiMusicFill /> },

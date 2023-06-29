@@ -31,6 +31,18 @@
     display: flex;
     justify-content: center;
 
+    .search__label {
+      position: relative;
+      .search__icon {
+        font-size: 30px;
+        color: #ffffff9d;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
     .input__search {
       width: 60%;
       padding: 15px;
@@ -38,6 +50,7 @@
       border: 0;
       font-weight: 700;
       background-color: #394639;
+      color: #ffffff;
 
       &::placeholder {
         color: rgb(173, 189, 175);

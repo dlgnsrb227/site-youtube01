@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Category, Videos } from './';
 import { PiYoutubeLogoDuotone } from 'react-icons/pi';
+import Loader from './Loader';
 
 const MainCont = () => {
   const [selectCategory, setSelectCategory] = useState();
@@ -8,12 +9,14 @@ const MainCont = () => {
 
   useEffect(() => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=music&type=video&key=AIzaSyAdTxi82dcM4uZKlRFskdgep0aNJErlb6E`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${selectCategory}&type=video&key=AIzaSyAdTxi82dcM4uZKlRFskdgep0aNJErlb6E`
     )
       .then((response) => response.json())
       .then((result) => setYoutubes(result.items))
       .catch((error) => console.log(error));
-  }, []);
+  }, [selectCategory]);
+
+  if (!Videos) return <Loader />;
 
   return (
     <main id="main">
